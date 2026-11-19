@@ -11,7 +11,7 @@
 <meta property="og:title" content="Srinivasa Rao Somu · AI Engineer and Product Builder">
 <meta property="og:description" content="AI products with LLMs, RAG and MCP that run every day in the cloud. 14 years in banking risk analytics.">
 <meta property="og:url" content="https://somu-analyst.github.io/">
-<meta property="og:image" content="https://raw.githubusercontent.com/somu-analyst/somu-analyst/main/assets/jsc_pitch_play.jpg">
+<meta property="og:image" content="https://somu-analyst.github.io/videos/pitch.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Person",
@@ -24,70 +24,154 @@
  "sameAs": ["https://github.com/somu-analyst", "https://www.linkedin.com/in/srinivasaraosomu/"]}
 </script>
 <style>
-:root { --bg:#f6f8f7; --fg:#10241b; --dim:#55675e; --card:#fff; --line:#dfe7e3; --acc:#0c9a3b; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0b1511; --fg:#eaf2ee; --dim:#a3b6ad; --card:#13211b; --line:#22342b; --acc:#3ccf6c; } }
-:root[data-theme="dark"] { --bg:#0b1511; --fg:#eaf2ee; --dim:#a3b6ad; --card:#13211b; --line:#22342b; --acc:#3ccf6c; }
+:root { --bg:#f6f8f7; --fg:#10241b; --dim:#55675e; --card:#fff; --line:#dfe7e3; --acc:#0c8a35; --chip:#e8f3ec; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0b1511; --fg:#eaf2ee; --dim:#a3b6ad; --card:#13211b; --line:#22342b; --acc:#3ccf6c; --chip:#17301f; } }
+:root[data-theme="dark"] { --bg:#0b1511; --fg:#eaf2ee; --dim:#a3b6ad; --card:#13211b; --line:#22342b; --acc:#3ccf6c; --chip:#17301f; }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
-main { max-width: 920px; margin: 0 auto; padding: 48px 16px 64px; }
-h1 { font-size: clamp(30px, 6vw, 46px); margin: 0 0 6px; letter-spacing: -1px; }
-.sub { color: var(--dim); font-size: 18px; margin: 0 0 22px; }
-.lead { font-size: 19px; max-width: 760px; }
-.links a { display:inline-block; margin: 6px 10px 0 0; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); text-decoration: none; background: var(--card); }
+main { max-width: 980px; margin: 0 auto; padding: 44px 16px 64px; }
+h1 { font-size: clamp(30px, 6vw, 46px); margin: 0 0 4px; letter-spacing: -1px; line-height: 1.15; }
+.sub { color: var(--acc); font-weight: 600; font-size: 18px; margin: 0 0 16px; }
+.lead { font-size: 19px; max-width: 780px; margin: 0 0 8px; }
+.links a { display:inline-block; margin: 8px 8px 0 0; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); text-decoration: none; background: var(--card); font-weight: 600; }
 .links a.primary { background: var(--acc); color: #fff; border-color: var(--acc); }
-h2 { margin: 44px 0 14px; font-size: 24px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
-.card img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
-.card div { padding: 14px 16px 18px; }
-.card h3 { margin: 0 0 6px; font-size: 18px; }
-.card p { margin: 0 0 10px; color: var(--dim); font-size: 15px; }
-.card a { color: var(--acc); font-weight: 600; text-decoration: none; margin-right: 12px; }
-.tags { color: var(--dim); font-size: 14px; }
-footer { margin-top: 48px; color: var(--dim); font-size: 14px; }
+.facts { display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 26px 0 0; }
+.facts div { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.facts b { display:block; font-size: 22px; color: var(--acc); }
+.facts span { color: var(--dim); font-size: 14px; }
+h2 { margin: 46px 0 6px; font-size: 26px; }
+.h2sub { color: var(--dim); margin: 0 0 16px; }
+video { width: 100%; display: block; background: #000; aspect-ratio: 16/9; border-radius: 12px; }
+.feature { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.feature h3 { margin: 14px 0 4px; font-size: 20px; }
+.feature p { margin: 0; color: var(--dim); }
+.tabs { display:flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+.tabs button { font: inherit; font-size: 15px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--acc); color: #fff; border-color: var(--acc); }
+ul.points { margin: 12px 0 0; padding-left: 20px; }
+ul.points li { margin: 4px 0; }
+.tags { margin-top: 12px; display:flex; flex-wrap: wrap; gap: 6px; }
+.tags span { background: var(--chip); color: var(--fg); font-size: 13px; padding: 3px 10px; border-radius: 999px; }
+.more a { color: var(--acc); font-weight: 600; text-decoration: none; margin-right: 16px; }
+.more { margin-top: 12px; }
+.grid2 { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 16px; }
+.avatar img { width: 100%; border-radius: 12px; display:block; }
+.list { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.list div { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+.list b { display:block; margin-bottom: 4px; }
+.list span { color: var(--dim); font-size: 15px; }
+.cta { margin-top: 48px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; text-align: center; }
+.cta h2 { margin: 0 0 6px; }
+footer { margin-top: 32px; color: var(--dim); font-size: 14px; text-align: center; }
+footer a { color: inherit; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Srinivasa Rao Somu</h1>
-  <p class="sub">Somu · AI Engineer · AI Developer · AI Product Manager · New Jersey, USA</p>
-  <p class="lead">I spent 14 years finding risk in bank data: fraud, money laundering, credit losses, stress tests.
-  Now I build AI products that do the heavy lifting and keep themselves honest, from the first idea to a product that
-  runs every morning in the cloud. LLMs, RAG, MCP and agents, in Python.</p>
-  <p class="links">
-    <a class="primary" href="https://www.linkedin.com/in/srinivasaraosomu/">LinkedIn</a>
-    <a href="https://github.com/somu-analyst">GitHub</a>
-  </p>
+  <header>
+    <h1>Srinivasa Rao Somu</h1>
+    <p class="sub">AI Engineer · AI Developer · AI Product Manager · New Jersey, USA</p>
+    <p class="lead">I spent 14 years finding risk in bank data: fraud, money laundering, credit losses, stress tests.
+    Now I build AI products that do the heavy lifting and keep themselves honest, from the first idea to a product
+    that runs every morning in the cloud.</p>
+    <p class="links">
+      <a class="primary" href="https://www.linkedin.com/in/srinivasaraosomu/">Message me on LinkedIn</a>
+      <a href="#work">See the products</a>
+      <a href="https://github.com/somu-analyst">GitHub</a>
+    </p>
+    <div class="facts">
+      <div><b>3</b><span>AI products built end to end</span></div>
+      <div><b>Daily</b><span>they run on their own in the cloud</span></div>
+      <div><b>14 yrs</b><span>banking risk and analytics</span></div>
+      <div><b>Python</b><span>LLMs · RAG · MCP · agents</span></div>
+    </div>
+  </header>
 
-  <h2>Products I built</h2>
-  <div class="grid">
-    <article class="card">
-      <a href="https://somu-analyst.github.io/Job-Search-Copilot/"><img src="https://raw.githubusercontent.com/somu-analyst/somu-analyst/main/assets/jsc_pitch_play.jpg" alt="Job Search Copilot pitch video"></a>
-      <div><h3>Job Search Copilot</h3>
-      <p>Finds jobs from 40+ sources, tailors an honest resume for each with RAG and a fact-checking guard, coaches interviews, and tracks applications from the inbox. For job seekers and staffing firms.</p>
-      <a href="https://somu-analyst.github.io/Job-Search-Copilot/">Website</a><a href="https://github.com/somu-analyst/Job-Search-Copilot/blob/main/assets/pitch.mp4">Watch the pitch</a>
-      <p class="tags">Python · FastAPI · Streamlit · RAG · LLMs · Gmail API · Oracle Cloud</p></div>
-    </article>
-    <article class="card">
-      <a href="https://somu-analyst.github.io/WallStreet_Agentic_TradeOps/"><img src="https://raw.githubusercontent.com/somu-analyst/WallStreet_Agentic_TradeOps/main/assets/media/next/teaser.gif" alt="WallStreet Agentic TradeOps teaser"></a>
-      <div><h3>WallStreet Agentic TradeOps</h3>
-      <p>An options-intelligence terminal: open-interest flow, dealer gamma and a 24-model signal ensemble that scores its own accuracy, delivered by Telegram bot and a web terminal.</p>
-      <a href="https://somu-analyst.github.io/WallStreet_Agentic_TradeOps/">Website</a><a href="https://github.com/somu-analyst/WallStreet_Agentic_TradeOps">Showcase</a>
-      <p class="tags">Python · Streamlit · Telegram · MCP · LLM gateway · Docker</p></div>
-    </article>
-    <article class="card">
-      <a href="https://github.com/somu-analyst/Avatar_AI_Agent"><img src="https://raw.githubusercontent.com/somu-analyst/Avatar_AI_Agent/main/docs/images/avatars.png" alt="Avatar AI 3D avatars"></a>
-      <div><h3>Avatar AI</h3>
-      <p>A private voice assistant with a lip-synced 3D avatar on a local LLM: interrupt it any time, ask for live data, talk in English, Hindi or Telugu.</p>
-      <a href="https://github.com/somu-analyst/Avatar_AI_Agent">Code</a>
-      <p class="tags">Python · FastAPI · WebSockets · Ollama · faster-whisper</p></div>
-    </article>
+  <section id="work">
+    <h2>Job Search Copilot</h2>
+    <p class="h2sub">Finds the right jobs, writes an honest resume for each one, coaches the interview and tracks every application from the inbox.</p>
+    <div class="feature">
+      <div class="tabs" role="tablist" aria-label="Job Search Copilot videos">
+        <button role="tab" aria-selected="true" data-src="videos/pitch.mp4" data-poster="videos/pitch.jpg">▶ 2-min pitch</button>
+        <button role="tab" aria-selected="false" data-src="videos/feature_tour.mp4" data-poster="videos/feature_tour.jpg">▶ 2-min feature tour</button>
+        <button role="tab" aria-selected="false" data-src="videos/product_tour.mp4" data-poster="videos/product_tour.jpg">▶ 4-min product tour</button>
+      </div>
+      <video id="jsc" controls preload="metadata" playsinline poster="videos/pitch.jpg" src="videos/pitch.mp4"></video>
+      <ul class="points">
+        <li><b>Finds jobs from 40+ sources</b> and scores each one against the person's resume.</li>
+        <li><b>Tailors truthfully:</b> RAG matches every requirement to real experience, and a check blocks any claim the resume can't back up.</li>
+        <li><b>Interview coach:</b> quizzes, mock video interviews and AI feedback on a recorded answer.</li>
+        <li><b>Tracks itself:</b> reads employer replies in Gmail and moves each application forward.</li>
+        <li><b>For staffing firms:</b> one job pool with a profile per consultant.</li>
+      </ul>
+      <div class="tags"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>RAG</span><span>LLMs</span><span>Gmail API</span><span>Telegram bot</span><span>Oracle Cloud</span></div>
+      <p class="more"><a href="https://somu-analyst.github.io/Job-Search-Copilot/">Product website</a><a href="https://github.com/somu-analyst/Job-Search-Copilot">Showcase repo</a></p>
+    </div>
+
+    <h2>WallStreet Agentic TradeOps</h2>
+    <p class="h2sub">An options-intelligence terminal that turns market data into explained trade signals, and scores its own predictions every day.</p>
+    <div class="feature">
+      <video controls preload="metadata" playsinline poster="videos/wallstreet_tour.jpg" src="videos/wallstreet_tour.mp4"></video>
+      <ul class="points">
+        <li>Open-interest flow, dealer gamma and a 24-model signal ensemble, with Black–Scholes and Monte Carlo pricing.</li>
+        <li>Each model is weighted by its recent hit rate; walk-forward checks catch signals that only fit noise.</li>
+        <li>An LLM gateway that fails over across providers, and an MCP server that gives AI agents read-only access.</li>
+      </ul>
+      <div class="tags"><span>Python</span><span>Streamlit</span><span>Telegram bot</span><span>MCP</span><span>SQLite</span><span>Docker</span><span>Oracle Cloud</span></div>
+      <p class="more"><a href="https://somu-analyst.github.io/WallStreet_Agentic_TradeOps/">Product website</a><a href="https://github.com/somu-analyst/WallStreet_Agentic_TradeOps">Showcase repo</a></p>
+    </div>
+
+    <h2>Avatar AI</h2>
+    <p class="h2sub">A private voice assistant with a lip-synced 3D avatar on a local LLM. Interrupt it any time; it speaks English, Hindi and Telugu.</p>
+    <div class="feature avatar">
+      <img src="https://raw.githubusercontent.com/somu-analyst/Avatar_AI_Agent/main/docs/images/avatars.png" alt="Avatar AI 3D avatars" loading="lazy">
+      <div class="tags"><span>Python</span><span>FastAPI</span><span>WebSockets</span><span>Ollama</span><span>faster-whisper</span><span>function calling</span></div>
+      <p class="more"><a href="https://github.com/somu-analyst/Avatar_AI_Agent">Code on GitHub</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How I work</h2>
+    <div class="list">
+      <div><b>Problem first</b><span>Start from what the user actually needs, not from the model.</span></div>
+      <div><b>Honest AI</b><span>Guardrails and fact checks, so the output can be trusted.</span></div>
+      <div><b>Measured</b><span>Every signal and feature is tested against real history before it ships.</span></div>
+      <div><b>Shipped</b><span>Cloud, scheduling, monitoring and auto-deploy: products, not notebooks.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Currently building</h2>
+    <div class="list">
+      <div><b>Talent Outreach</b><span>A client requirement in; the right consultants found and contacted by email, SMS and voicemail.</span></div>
+      <div><b>"Preparing for" mode</b><span>Pick the job you're interviewing for, and every practice tab follows it.</span></div>
+      <div><b>Licensed job data</b><span>More sources, so the copilot depends less on any single job board.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Background</h2>
+    <p>Risk and analytics in banking: fraud and AML monitoring, credit risk and loss forecasting, CCAR and CECL stress testing,
+    collections strategy. Master's in Economics (Finance and Statistics), B.Tech in Electronics and Communication Engineering.</p>
+    <div class="tags"><span>LLMs</span><span>RAG</span><span>MCP</span><span>agents</span><span>Python</span><span>SQL</span><span>SAS</span><span>PySpark</span><span>Databricks</span><span>Snowflake</span><span>FastAPI</span><span>Docker</span><span>GitHub Actions</span></div>
+  </section>
+
+  <div class="cta">
+    <h2>Hiring for an AI role?</h2>
+    <p class="h2sub">AI Engineer, AI Developer or AI Product Manager. I'd like to hear about it.</p>
+    <p class="links"><a class="primary" href="https://www.linkedin.com/in/srinivasaraosomu/">Message me on LinkedIn</a></p>
   </div>
-
-  <h2>Background</h2>
-  <p>Risk and analytics in banking: fraud and AML monitoring, credit risk and loss forecasting, CCAR and CECL stress testing,
-  collections strategy. Master's in Economics (Finance and Statistics), B.Tech in Electronics and Communication Engineering.</p>
-  <footer>© Srinivasa Rao Somu · <a href="https://github.com/somu-analyst" style="color:inherit">github.com/somu-analyst</a></footer>
+  <footer>© Srinivasa Rao Somu · <a href="https://github.com/somu-analyst">github.com/somu-analyst</a></footer>
 </main>
+<script>
+const v = document.getElementById('jsc');
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
+  v.poster = b.dataset.poster; v.src = b.dataset.src; v.play().catch(() => {});
+}));
+document.querySelectorAll('video').forEach(el => el.addEventListener('play', () => {
+  document.querySelectorAll('video').forEach(o => { if (o !== el) o.pause(); });
+}));
+</script>
 </body>
 </html>
